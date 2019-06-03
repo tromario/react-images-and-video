@@ -8,7 +8,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jossmac/react-images.git"
+    "url": "https://github.com/tromario/react-images-and-video.git"
   },
   "dependencies": {
     "aphrodite": "^0.5.0",
@@ -61,9 +61,9 @@
     "lint": "eslint src/** examples/src/app.js examples/src/components/Gallery.js"
   },
   "bugs": {
-    "url": "https://github.com/jossmac/react-images/issues"
+    "url": "https://github.com/tromario/react-images-and-video/issues"
   },
-  "homepage": "http://jossmac.github.io/react-images",
+  "homepage": "http://tromario.github.io/react-images-and-video",
   "keywords": [
     "react",
     "react-component",

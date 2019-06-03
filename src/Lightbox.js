@@ -271,18 +271,26 @@ class Lightbox extends Component {
 					https://fb.me/react-unknown-prop is resolved
 					<Swipeable onSwipedLeft={this.gotoNext} onSwipedRight={this.gotoPrev} />
 				*/}
-				<img
-					className={css(this.classes.image, imageLoaded && this.classes.imageLoaded)}
-					onClick={onClickImage}
-					sizes={sizes}
-					alt={image.alt}
-					src={image.src}
-					srcSet={sourceSet}
-					style={{
-						cursor: onClickImage ? 'pointer' : 'auto',
-						maxHeight: `calc(100vh - ${heightOffset})`,
-					}}
-				/>
+				{
+					(image.fileType === 'video') ? (
+						<video height="auto" width="auto" controls>
+							<source src={image.src} />
+						</video>
+					) : (
+						<img
+							className={css(this.classes.image, imageLoaded && this.classes.imageLoaded)}
+							onClick={onClickImage}
+							sizes={sizes}
+							alt={image.alt}
+							src={image.src}
+							srcSet={sourceSet}
+							style={{
+								cursor: onClickImage ? 'pointer' : 'auto',
+								maxHeight: `calc(100vh - ${heightOffset})`,
+							}}
+						/>
+					)
+				}
 			</figure>
 		);
 	}
