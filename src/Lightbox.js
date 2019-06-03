@@ -274,7 +274,17 @@ class Lightbox extends Component {
 				{
 					(image.fileType === 'video') ? (
 						<video height="auto" width="auto" controls>
-							<source src={image.src} />
+							<source
+								src={image.src}
+								height="100%"
+								width="100%"
+								controls
+								alt={image.alt}
+								style={{
+									cursor: onClickImage ? 'pointer' : 'auto',
+									maxHeight: `calc(100vh - ${heightOffset})`,
+								}}
+							/>
 						</video>
 					) : (
 						<img
